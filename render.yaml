@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: my-streamlit-app
+    env: python
+    plan: free
+    region: oregon
+    pythonVersion: 3.12
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run Home.py --server.port $PORT --server.address 0.0.0.0
